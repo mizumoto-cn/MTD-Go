@@ -1,4 +1,4 @@
-package main_demo
+package main
 
 import (
 	"log"
@@ -8,7 +8,7 @@ import (
 	"github.com/urfave/cli/v2"
 )
 
-func init() {
+func main() {
 	// set default concurrency number
 	default_concurrency_num := runtime.NumCPU()
 
@@ -41,7 +41,3 @@ func init() {
 		log.Fatal(err)
 	}
 }
-
-// change to main{}
-// then run `go mod tidy`
-// go run ./demo.go -h
