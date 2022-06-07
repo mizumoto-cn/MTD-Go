@@ -7,7 +7,6 @@ import (
 	"net/http"
 	"os"
 	"path"
-	"strings"
 )
 
 type Downloader struct {
@@ -18,13 +17,15 @@ func NewDownloader(cc int) *Downloader {
 	return &Downloader{concurrency_num: cc}
 }
 
-// func (d *Downloader) mDownload(url, filename string, content_size int) error {
+// func (d *Downloader) multiDownload(url, filename string, content_size int) error {
 // 	return nil
 // }
+// at multi.go
 
-// func (d *Downloader) sDownload(url, filename string) error {
+// func (d *Downloader) singleDownload(url, filename string) error {
 // 	return nil
 // }
+// at single.go
 
 func (d *Downloader) Download(url string, filename string) error {
 	if filename == "" {
@@ -38,19 +39,10 @@ func (d *Downloader) Download(url string, filename string) error {
 	}
 
 	if res.StatusCode == http.StatusOK && res.Header.Get("Accept-Ranges") == "bytes" {
-		return d.mDownload(url, filename, int(res.ContentLength))
+		return d.multiDownload(url, filename, int(res.ContentLength))
 	}
 
-	return d.sDownload(url, filename)
-}
-
-func (d *Downloader) getPartDir(filename string) string {
-	return strings.SplitN(filename, ".", 2)[0]
-}
-
-func (d *Downloader) getPartFilename(filename string, partID int) string {
-	partdir := d.getPartDir(filename)
-	return fmt.Sprintf("%s/%s-%d", partdir, filename, partID)
+	return d.singleDownload(url, filename)
 }
 
 func (d *Downloader) PartDownload(url, filename string, range_begin, range_end, id int) {

@@ -5,6 +5,8 @@ import (
 	"os"
 	"runtime"
 
+	"github.com/mizumoto-cn/MTD-Go/core"
+
 	"github.com/urfave/cli/v2"
 )
 
@@ -35,7 +37,14 @@ func main() {
 				Usage:   "Set default concurrency number",
 			},
 		},
+		Action: func(ctx *cli.Context) error {
+			url := ctx.String("url")
+			filename := ctx.String("output")
+			concurrency_num := ctx.Int("concurrency")
+			return core.NewDownloader(concurrency_num).Download(url, filename)
+		},
 	}
+
 	err := cliapp.Run(os.Args)
 	if err != nil {
 		log.Fatal(err)

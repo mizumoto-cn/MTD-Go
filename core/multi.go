@@ -32,4 +32,7 @@ func (d *Downloader) multiDownload(url, filename string, content_size int) error
 	}
 	waitgroup.Wait() // Wait blocks until the WaitGroup counter is zero.
 
+	// merge
+	d.merge(filename)
+	return nil
 }
