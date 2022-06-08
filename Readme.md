@@ -1,6 +1,6 @@
 # MTD-Go
 
-[![Go Report Card](https://goreportcard.com/badge/github.com/mizumoto-cn/MTD-Go)](https://goreportcard.com/report/github.com/mizumoto-cn/MTD-Go) [![codebeat badge](https://codebeat.co/badges/c02456c9-de55-413f-a6a9-5d457b69f508)](https://codebeat.co/projects/github-com-mizumoto-cn-mtd-go-master) 
+[![Go Report Card](https://goreportcard.com/badge/github.com/mizumoto-cn/MTD-Go)](https://goreportcard.com/report/github.com/mizumoto-cn/MTD-Go) [![codebeat badge](https://codebeat.co/badges/c02456c9-de55-413f-a6a9-5d457b69f508)](https://codebeat.co/projects/github-com-mizumoto-cn-mtd-go-master)  
 
 ---
 
