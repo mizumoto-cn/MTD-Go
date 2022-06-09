@@ -1,6 +1,9 @@
 # MTD-Go
 
-[![Go Report Card](https://goreportcard.com/badge/github.com/mizumoto-cn/MTD-Go)](https://goreportcard.com/report/github.com/mizumoto-cn/MTD-Go) [![codebeat badge](https://codebeat.co/badges/c02456c9-de55-413f-a6a9-5d457b69f508)](https://codebeat.co/projects/github-com-mizumoto-cn-mtd-go-master) [![Build](https://github.com/mizumoto-cn/MTD-Go/workflows/go.yml/badge.svg?branch=master)](https://github.com/mizumoto-cn/MTD-Go/actions)
+[![Go Report Card](https://goreportcard.com/badge/github.com/mizumoto-cn/MTD-Go)](https://goreportcard.com/report/github.com/mizumoto-cn/MTD-Go) 
+[![codebeat badge](https://codebeat.co/badges/c02456c9-de55-413f-a6a9-5d457b69f508)](https://codebeat.co/projects/github-com-mizumoto-cn-mtd-go-master)
+[![Build](https://github.com/mizumoto-cn/MTD-Go/actions/workflows/go.yml/badge.svg?branch=master)](https://github.com/mizumoto-cn/MTD-Go/actions)
+
 ---
 
 MTD-Go is a simple (also light-weight, maybe) multi-threaded downloader.
